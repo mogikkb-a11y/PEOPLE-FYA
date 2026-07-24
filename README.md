@@ -11,8 +11,6 @@ Permite registrar y consultar créditos de clientes de manera ágil y segura.
 - Node.js 18+
 - Git
 
-*(No necesitas instalar PostgreSQL: el proyecto usa SQLite por defecto.)*
-
 ---
 
 ## 📦 Instalación
@@ -37,17 +35,6 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 
-### 4. Variables de entorno
-El proyecto funciona sin `.env` (usa SQLite por defecto).  
-Opcionalmente, puedes crear un archivo `.env` en la raíz del proyecto con:
-
-DEBUG=True
-
-SECRET_KEY=tu_clave_secreta
-
-EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
-
-
 ### 5. Instalar dependencias frontend
 cd frontend
 
@@ -58,8 +45,10 @@ npm run build
 Esto genera la carpeta frontend/build/ que Django usará.
 
 
-### 6. Migraciones y superusuario
-python manage.py makemigrations
+### 6. Migraciones y superusuario 
+Lo primero a hacer es cerrar la terminal y volver a utilizar cd PEOPLE-FYA (porque estamos metidos en frontend, ya nos saldremos de allí)
+
+python manage.py makemigrations 
 
 python manage.py migrate
 
@@ -70,5 +59,3 @@ python manage.py createsuperuser (si quiere administrar la database)
 python manage.py collectstatic (escriba yes)
 
 python manage.py runserver
-
-

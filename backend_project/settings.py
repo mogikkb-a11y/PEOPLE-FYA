@@ -53,7 +53,10 @@ STATICFILES_DIRS = [BASE_DIR / "frontend" / "build" / "static"]
 WSGI_APPLICATION = "backend_project.wsgi.application"
 
 DATABASES = {
-    "default": env.db(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}")
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
 }
 
 # URL base para servir estáticos
