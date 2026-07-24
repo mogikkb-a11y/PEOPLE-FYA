@@ -2,7 +2,7 @@
 
 
 ## 1. Clonar el repositorio (en terminal)
-git clone https://github.com/mogikkb-a11y/PROYECTO_FYASC.git
+git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git
 
 cd PROYECTO_FYASC
 
