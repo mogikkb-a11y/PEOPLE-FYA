@@ -22,36 +22,51 @@ Permite registrar y consultar créditos de clientes de manera ágil y segura.
 git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git
 cd PEOPLE-FYA
 
+
 ### 2. Crear entorno virtual
 python -m venv venv
+
 source venv/bin/activate   # Linux/Mac
+
 venv\Scripts\activate      # Windows
+
 
 ### 3. Instalar dependencias
 pip install -r requirements.txt
+
 
 ### 4. Variables de entorno
 El proyecto funciona sin `.env` (usa SQLite por defecto).  
 Opcionalmente, puedes crear un archivo `.env` en la raíz del proyecto con:
 
 DEBUG=True
+
 SECRET_KEY=tu_clave_secreta
+
 EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+
 
 ### 5. Instalar dependencias frontend
 cd frontend
+
 npm install
+
 npm run build
 
 Esto genera la carpeta frontend/build/ que Django usará.
 
+
 ### 6. Migraciones y superusuario
 python manage.py makemigrations
+
 python manage.py migrate
+
 python manage.py createsuperuser (si quiere administrar la database)
+
 
 ###7. Ejecución en Local
 python manage.py collectstatic (escriba yes)
+
 python manage.py runserver
 
 
