@@ -46,7 +46,7 @@ Esto genera la carpeta frontend/build/ que Django usará.
 
 
 ### 6. Migraciones y superusuario 
-Lo primero a hacer es cerrar la terminal y volver a utilizar cd PEOPLE-FYA (porque estamos metidos en frontend, ya nos saldremos de allí)
+Lo primero a hacer es salirse de LA CARPETA frontend y volver a la raíz
 
 python manage.py makemigrations 
 
