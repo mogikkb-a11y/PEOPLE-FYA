@@ -58,8 +58,10 @@ npm run build
 Esto genera la carpeta frontend/build/ que Django usará.
 
 
-### 6. Migraciones y superusuario
-python manage.py makemigrations
+### 6. Migraciones y superusuario 
+Lo primero a hacer es cerrar la terminal y volver a utilizar cd PEOPLE-FYA (porque estamos metidos en frontend, ya nos saldremos de allí)
+
+python manage.py makemigrations 
 
 python manage.py migrate
 
