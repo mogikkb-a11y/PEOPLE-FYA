@@ -12,7 +12,7 @@ media/
 
 # Node/React
 node_modules/
-build/
+#build/
 .env
 
 # IDE
