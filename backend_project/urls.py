@@ -25,6 +25,7 @@ router = routers.DefaultRouter()
 router.register(r'creditos', CreditoViewSet)
 
 urlpatterns = [
-    path("api/", include("core.urls")),   # API
+    path("admin/", admin.site.urls),
+    path("api/", include(router.urls)),   # API
     path("", TemplateView.as_view(template_name="index.html")),  # React frontend
 ]
