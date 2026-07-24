@@ -4,7 +4,7 @@
 ## 1. Clonar el repositorio (en terminal)
 git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git
 
-cd PROYECTO_FYASC
+cd PEOPLE-FYA
 
 
 ## 2. Crear entorno virtual e instalar dependencias (en terminal)
