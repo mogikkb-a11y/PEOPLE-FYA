@@ -1,38 +1,57 @@
-# PROYECTO_FYASC
+# PEOPLE-FYA
 
+Plataforma de gestión financiera desarrollada con **Django REST Framework** (backend) y **React** (frontend).  
+Permite registrar y consultar créditos de clientes de manera ágil y segura.
 
-## 1. Clonar el repositorio (en terminal - ASEGURATE DE TENER INTERNET)
-git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git (hacer dos veces si no funciona)
+---
 
+## 🚀 Requisitos previos
+
+- Python 3.12+
+- Node.js 18+
+- Git
+
+*(No necesitas instalar PostgreSQL: el proyecto usa SQLite por defecto.)*
+
+---
+
+## 📦 Instalación
+
+### 1. Clonar el repositorio (asegurese de tener internet)
+(en terminal)
+git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git
 cd PEOPLE-FYA
 
-
-## 2. Crear entorno virtual e instalar dependencias (en terminal)
+### 2. Crear entorno virtual
 python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 
-venv\Scripts\activate   (si es en Windows)
-
-source venv/bin/activate (si es en Linux/Mac)
-
+### 3. Instalar dependencias
 pip install -r requirements.txt
 
+### 4. Variables de entorno
+El proyecto funciona sin `.env` (usa SQLite por defecto).  
+Opcionalmente, puedes crear un archivo `.env` en la raíz del proyecto con:
 
-## 3. Migrar la base de datos (en terminal)
+DEBUG=True
+SECRET_KEY=tu_clave_secreta
+EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+
+### 5. Instalar dependencias frontend
+cd frontend
+npm install
+npm run build
+
+Esto genera la carpeta frontend/build/ que Django usará.
+
+### 6. Migraciones y superusuario
+python manage.py makemigrations
 python manage.py migrate
+python manage.py createsuperuser (si quiere administrar la database)
 
-
-## 4. Ejecutar el servidor (en terminal)
+###7. Ejecución en Local
+python manage.py collectstatic (escriba yes)
 python manage.py runserver
 
-La aplicación estará disponible en:
-Frontend (templates Django): http://127.0.0.1:8000/
 
-API Créditos: http://127.0.0.1:8000/api/creditos/
-
-
-## Notas importantes
-El archivo db.sqlite3 no se sube al repositorio (está en .gitignore).
-
-Cada persona que descargue el proyecto debe correr python manage.py migrate para generar su propia base local.
-
-En producción (Render), el proyecto puede usar Postgres automáticamente si existe la variable DATABASE_URL.
