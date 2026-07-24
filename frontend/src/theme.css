@@ -1,0 +1,239 @@
+/* ============================================================
+   theme.css — Identidad visual "Proyecto People"
+   Paleta corporativa azul / verde, tipografía Poppins + Inter
+   Importar UNA vez en index.js o App.js:
+     import './theme.css';
+   Requiere en public/index.html (o vía CDN):
+     Bootstrap 5, Bootstrap Icons, Google Fonts (Poppins + Inter)
+   ============================================================ */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+ 
+:root {
+  --pp-blue-900: #0B3A5B;
+  --pp-blue-700: #0E5A8A;
+  --pp-blue-500: #1478B5;
+  --pp-blue-100: #E6F2FA;
+ 
+  --pp-green-700: #0F9D6B;
+  --pp-green-500: #17B67F;
+  --pp-green-100: #E4F8EF;
+ 
+  --pp-ink: #16283A;
+  --pp-muted: #64748B;
+  --pp-bg: #F4F8FB;
+  --pp-surface: #FFFFFF;
+  --pp-border: #E2E9F0;
+ 
+  --pp-shadow-sm: 0 2px 8px rgba(11, 58, 91, 0.06);
+  --pp-shadow-md: 0 10px 30px rgba(11, 58, 91, 0.10);
+  --pp-shadow-lg: 0 20px 45px rgba(11, 58, 91, 0.14);
+ 
+  --pp-radius: 16px;
+  --pp-radius-sm: 10px;
+}
+ 
+body {
+  background-color: var(--pp-bg);
+  color: var(--pp-ink);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+ 
+.pp-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--pp-blue-900);
+}
+ 
+.pp-gradient-bg {
+  background: linear-gradient(135deg, var(--pp-blue-900) 0%, var(--pp-blue-700) 55%, var(--pp-green-700) 130%);
+}
+ 
+.pp-gradient-text {
+  background: linear-gradient(90deg, var(--pp-blue-700), var(--pp-green-600, var(--pp-green-500)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+ 
+/* ---------- Cards ---------- */
+.pp-card {
+  background: var(--pp-surface);
+  border: 1px solid var(--pp-border);
+  border-radius: var(--pp-radius);
+  box-shadow: var(--pp-shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+ 
+.pp-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--pp-shadow-lg);
+}
+ 
+/* ---------- Buttons ---------- */
+.pp-btn-primary {
+  background: linear-gradient(90deg, var(--pp-blue-700), var(--pp-blue-500));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  box-shadow: var(--pp-shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.pp-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--pp-shadow-md);
+  filter: brightness(1.05);
+  color: #fff;
+}
+.pp-btn-primary:active { transform: translateY(0); }
+ 
+.pp-btn-success {
+  background: linear-gradient(90deg, var(--pp-green-700), var(--pp-green-500));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  box-shadow: var(--pp-shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.pp-btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--pp-shadow-md);
+  filter: brightness(1.05);
+  color: #fff;
+}
+ 
+.pp-btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--pp-blue-700);
+  color: var(--pp-blue-700);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  transition: all .2s ease;
+}
+.pp-btn-outline:hover {
+  background: var(--pp-blue-700);
+  color: #fff;
+}
+ 
+/* ---------- Forms ---------- */
+.pp-form-card {
+  border-radius: var(--pp-radius);
+  box-shadow: var(--pp-shadow-md);
+  border: 1px solid var(--pp-border);
+  overflow: hidden;
+}
+ 
+.pp-form-header {
+  background: linear-gradient(120deg, var(--pp-blue-900), var(--pp-blue-700));
+  color: #fff;
+  padding: 2rem;
+}
+ 
+.pp-input-group-text {
+  background: var(--pp-blue-100);
+  border: 1px solid var(--pp-border);
+  border-right: none;
+  color: var(--pp-blue-700);
+  width: 46px;
+  justify-content: center;
+}
+ 
+.pp-input {
+  border: 1px solid var(--pp-border);
+  border-left: none;
+  padding: 0.65rem 0.9rem;
+}
+.pp-input:focus {
+  box-shadow: 0 0 0 3px var(--pp-blue-100);
+  border-color: var(--pp-blue-500);
+}
+.pp-form-control-wrap:focus-within .pp-input-group-text {
+  border-color: var(--pp-blue-500);
+  background: var(--pp-blue-500);
+  color: #fff;
+}
+ 
+/* ---------- Table ---------- */
+.pp-table-wrap {
+  border-radius: var(--pp-radius);
+  overflow: hidden;
+  box-shadow: var(--pp-shadow-md);
+  border: 1px solid var(--pp-border);
+}
+ 
+.pp-table thead th {
+  background: linear-gradient(120deg, var(--pp-blue-900), var(--pp-blue-700));
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: none;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+ 
+.pp-table thead th .sort-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  opacity: 0.75;
+  padding: 0;
+  margin-left: 6px;
+}
+.pp-table thead th .sort-btn:hover { opacity: 1; }
+.pp-table thead th.active-sort .sort-btn { opacity: 1; color: var(--pp-green-100); }
+ 
+.pp-table tbody tr {
+  transition: background-color .15s ease;
+}
+.pp-table tbody tr:nth-of-type(odd) { background-color: var(--pp-bg); }
+.pp-table tbody tr:hover { background-color: var(--pp-blue-100); }
+ 
+.pp-table td {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  border-color: var(--pp-border);
+  font-size: 0.92rem;
+}
+ 
+.pp-badge-rate {
+  background: var(--pp-green-100);
+  color: var(--pp-green-700);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+}
+ 
+.pp-value-cell {
+  font-weight: 700;
+  color: var(--pp-blue-900);
+}
+ 
+.pp-search-input {
+  border-radius: 999px 0 0 999px;
+}
+.pp-search-btn {
+  border-radius: 0 999px 999px 0;
+}
+ 
+.pp-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1rem;
+}
