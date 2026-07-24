@@ -1,8 +1,8 @@
 # PROYECTO_FYASC
 
 
-## 1. Clonar el repositorio (en terminal)
-git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git
+## 1. Clonar el repositorio (en terminal - ASEGURATE DE TENER INTERNET)
+git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git (hacer dos veces si no funciona)
 
 cd PEOPLE-FYA
 
