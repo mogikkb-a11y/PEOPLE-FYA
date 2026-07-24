@@ -64,7 +64,7 @@ python manage.py migrate
 python manage.py createsuperuser (si quiere administrar la database)
 
 
-###7. Ejecución en Local
+### 7. Ejecución en Local
 python manage.py collectstatic (escriba yes)
 
 python manage.py runserver
