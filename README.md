@@ -19,7 +19,9 @@ Permite registrar y consultar créditos de clientes de manera ágil y segura.
 
 ### 1. Clonar el repositorio (asegurese de tener internet)
 (en terminal)
+
 git clone https://github.com/mogikkb-a11y/PEOPLE-FYA.git
+
 cd PEOPLE-FYA
 
 
