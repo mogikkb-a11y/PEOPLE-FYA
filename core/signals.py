@@ -17,6 +17,6 @@ def enviar_correo_credito(sender, instance, created, **kwargs):
             asunto,
             mensaje,
             "cuentasbarreto28",  # remitente
-            ["cuentasbarreto@gmail.com"],  # destinatario
+            ["fyasocialcapital@gmail.com"],  # destinatario
             fail_silently=False,
         )
