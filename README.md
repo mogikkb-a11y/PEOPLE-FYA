@@ -26,9 +26,9 @@ cd PEOPLE-FYA
 ### 2. Crear entorno virtual
 python -m venv venv
 
-source venv/bin/activate   # Linux/Mac
+source venv/bin/activate   ---> si su equipo tiene Linux/Mac
 
-venv\Scripts\activate      # Windows
+venv\Scripts\activate      ---> si su equipo tiene Windows
 
 
 ### 3. Instalar dependencias
