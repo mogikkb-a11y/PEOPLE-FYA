@@ -37,17 +37,6 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 
-### 4. Variables de entorno
-El proyecto funciona sin `.env` (usa SQLite por defecto).  
-Opcionalmente, puedes crear un archivo `.env` en la raíz del proyecto con:
-
-DEBUG=True
-
-SECRET_KEY=tu_clave_secreta
-
-EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
-
-
 ### 5. Instalar dependencias frontend
 cd frontend
 
