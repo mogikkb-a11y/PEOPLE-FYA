@@ -20,12 +20,13 @@ from django.contrib import admin
 from rest_framework import routers
 from core.views import CreditoViewSet
 from django.views.generic import TemplateView
+from django.urls import path, include
 
 router = routers.DefaultRouter()
 router.register(r'creditos', CreditoViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include(router.urls)),   # API
+    path("api/", include("core.urls")),   # API
     path("", TemplateView.as_view(template_name="index.html")),  # React frontend
 ]

@@ -5,3 +5,4 @@ whitenoise
 psycopg2-binary
 django-cors-headers
 dj-database-url
+django-environ
